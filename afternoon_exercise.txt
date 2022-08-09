@@ -53,3 +53,19 @@ How do I create a file within my directory?
 - [ ] Use the command (followed by file name): touch afternoon_file.txt
 - [ ] /// touch picture.png /// touch adobe1.pdf
 
+
+How do I open a file I’ve created?
+
+- [ ] open afternoon_file —— Opens in text
+- [ ] code afternoon_file.txt 
+
+How do I move or rename files?
+
+mv afternoon_file.txt .. — These 2 dots move it up 2 folders, one dot means this folder
+
+
+How do I delete a directory or file?
+
+rm afternoon_file.txt  — For a file
+rm - r afternoon_file.txt- Directory
+
