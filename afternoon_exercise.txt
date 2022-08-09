@@ -1,0 +1,55 @@
+Why are we using Terminal?
+
+This operating system comes under UNIX. The commands below will be applicable on any system, given access. This allows us to reduce steps along the way in SWE i.e Finding files; instead using the command line means we only need ONE process. Long story short- It makes things less complicated hence more efficient.
+
+How do I open Terminal?
+
+CMD SPACE -> Terminal
+
+Where am I currently on my terminal?
+
+Check where you are by typing in:  pwd
+
+:/Users/ravi
+
+Once I know which directory I’m in, how do I see what’s within this? 
+
+- [ ] Type in : ls
+
+Desktop        Documents      Downloads      Library        Movies         Music          Pictures       Postman        Public         c6_coursenotes coursework
+
+- [ ] To view a list of folders and files containing owner and permissions: ls -l
+- [ ] To view all (including hidden files) : la- al
+
+How do I move into a different directory?
+
+To Move into a directory you must already be in a folder one level up, then you enter: cd Documents —— Documents can be replaced by any folder I.e. Desktop
+
+➜  Documents
+
+*tip* To move across directories not one level away, branch them together by using the / e.g Desktop/Documents/xyz
+
+*tip* use tab button to autofill a directory you’ve already visited once you’ve began typing
+
+How do I go back to my Home directory?
+
+Cd
+
+Cd -    brings you back down one folder e.g Back to documents
+
+Cd.. This brings us back up one folder
+
+How do I create and open a  directory within another one?
+
+➜  Documents: mkdir afternoon_directory
+
+➜  Documents 
+
+To open : cd afternoon_directory
+➜  afternoon_directory 
+
+How do I create a file within my directory?
+
+- [ ] Use the command (followed by file name): touch afternoon_file.txt
+- [ ] /// touch picture.png /// touch adobe1.pdf
+
