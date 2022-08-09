@@ -1,0 +1,207 @@
+All information:
+
+
+Format: Questions in Bold, followed by what to do with code in italics, followed by a line space and the result of our code
+
+
+Why are we using Terminal?
+
+This operating system comes under UNIX. The commands below will be applicable on any system, given access. This allows us to reduce steps along the way in SWE i.e Finding files; instead using the command line means we only need ONE process. Long story short- It makes things less complicated hence more efficient.
+
+How do I open Terminal?
+
+CMD SPACE -> Terminal
+
+Where am I currently on my terminal?
+
+Check where you are by typing in:  pwd
+
+:/Users/ravi
+
+Once I know which directory I’m in, how do I see what’s within this? 
+
+- [ ] Type in : ls
+
+Desktop        Documents      Downloads      Library        Movies         Music          Pictures       Postman        Public         c6_coursenotes coursework
+
+- [ ] To view a list of folders and files containing owner and permissions: ls -l
+- [ ] To view all (including hidden files) : la- al
+
+How do I move into a different directory?
+
+To Move into a directory you must already be in a folder one level up, then you enter: cd Documents —— Documents can be replaced by any folder I.e. Desktop
+
+➜  Documents
+
+*tip* To move across directories not one level away, branch them together by using the / e.g Desktop/Documents/xyz
+
+*tip* use tab button to autofill a directory you’ve already visited once you’ve began typing
+
+How do I go back to my Home directory?
+
+Cd
+
+Cd -    brings you back down one folder e.g Back to documents
+
+Cd.. This brings us back up one folder
+
+How do I create and open a  directory within another one?
+
+➜  Documents: mkdir afternoon_directory
+
+➜  Documents 
+
+To open : cd afternoon_directory
+➜  afternoon_directory 
+
+How do I create a file within my directory?
+
+- [ ] Use the command (followed by file name): touch afternoon_file.txt
+- [ ] /// touch picture.png /// touch adobe1.pdf
+
+
+How do I open a file I’ve created?
+
+- [ ] open afternoon_file —— Opens in text
+- [ ] code afternoon_file.txt 
+
+How do I move or rename files?
+
+mv afternoon_file.txt .. — These 2 dots move it up 2 folders, one dot means this folder
+
+
+How do I delete a directory or file?
+
+rm afternoon_file.txt  — For a file
+rm - r afternoon_file.txt- Directory
+
+
+
+Why do we use Git?
+
+Allows us to monitor and track file changes, as well as others who have access to the link.
+
+How do I use Git?
+
+First, we need to create a Git directory. But choose where you want to locate it first:
+
+➜  afternoon_directory cd
+➜  ~ pwd
+/Users/ravi
+➜  ~ ls
+Desktop        Documents      Downloads      Library        Movies         Music          Pictures       Postman        Public         c6_coursenotes coursework
+➜  ~ cd Desktop
+➜  Desktop 
+
+Above shows me leaving my directory, and checking where I am. Then I found the folder I want my work to be in.
+
+Create the Git repository and enter it:
+➜  Desktop mkdir git_intro
+➜  Desktop cd git_intro
+➜  git_intro 
+
+Next we create a git repository within this directory(that is git_intro):
+
+git init
+
+➜  git_intro git init
+Initialized empty Git repository in /Users/ravi/Desktop/git_intro/.git/
+➜  git_intro git:(main) 
+
+How do we add and edit files on Git?
+
+touch afternoon_exercise.txt
+
+
+However, to actually upload this file to Git and have it tracked, we must enter the following code so that it is now “tracked”:
+
+git add afternoon_exercise.txt 
+
+Now this is done, however it is good to check our code for issues now rather than later, so we can edit difficulties one at a time and not go back and forth looking for the issues. To do this we use a code that allows us to check the status of our file:
+
+git status
+
+➜  git_intro git:(main) ✗ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   afternoon_exercise.txt
+
+➜  git_intro git:(main) ✗ 
+
+Things are updated and there are no issues, but for our file to be viewable on GithHub, we must commit our changes. This allows us to also keep a record of what’s been changed and when.
+
+
+How do I commit or revert a change?
+
+git commit -m "add afternoon_exercise.txt"
+
+
+➜  git_intro git:(main) ✗ git commit -m "add afternoon_exercise.txt"
+[main (root-commit) 8c3c33c] add afternoon_exercise.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 afternoon_exercise.txt
+➜  git_intro git:(main) 
+
+Now we can see the file has officially been changed.
+
+We can make further changes now too. Open the file using the “open” command and make any change, here I’m going to start my work for the exercise by copying in our intro to Terminal and our directory info, then press save.
+
+But these changes aren’t just for the present you, what if future you or a team member wants to see what specific changes have been made since the last commit? It would make sense to note your changes of course, but too with a title describing the changes, to do so:
+
+➜  git_intro git:(main) git add .  (Use . Instead of file name, as we’re already here, the . Represents the last change made)
+➜  git_intro git:(main) ✗ git commit -m "Terminal Intro and Directory info"
+
+
+Ok perfect, done, but let’s see how our changes look on record. To do this we enter the command 
+
+git log   
+
+commit cdb85660b9fbf3d3814141ffdf806126af58048b (HEAD -> main)
+Author: Ravi Hussein-Patel <ravihusseinpatel@gmail.com>
+Date:   Tue Aug 9 17:13:44 2022 +0100
+
+    Terminal Intro and Directory info
+
+commit 8c3c33ce52bd05fde0aae90303d7c4b74ef3505e
+Author: Ravi Hussein-Patel <ravihusseinpatel@gmail.com>
+Date:   Tue Aug 9 17:06:02 2022 +0100
+
+    add afternoon_exercise.txt
+(END)
+
+(Note: To leave the log press q)
+
+Here we can see our changes, when they happened, and have a rough idea of what changes were made.
+
+Repeat these steps.  Throughout the process ensure to make use of the code git status. This is a cheat code that will tell you if there’s anything to commit
+
+
+
+To revert a change: Use the command git revert followed by the 7 random digits that follow the word ‘main’ underneath the code commitment.
+
+
+➜  git_intro git:(main) git revert e11c53c
+
+[main edf170a] Revert "commiting and reverting changes in git"
+ 1 file changed, 45 deletions(-)
+➜  git_intro git:(main) git log
+➜  git_intro git:(main) 
+
+
+How do I share my code on GitHub?
+
+1. Go to  new repository on GitHub
+2. Entitle it, then create and copy the SSH link
+  3.git remote add origin (ssh link)
+  4. git push origin main
+
+
+
+
+
+
+ 
