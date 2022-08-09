@@ -126,49 +126,4 @@ Changes to be committed:
 
 Things are updated and there are no issues, but for our file to be viewable on GithHub, we must commit our changes. This allows us to also keep a record of what’s been changed and when.
 
-How do I commit or revert a change?
-
-git commit -m "add afternoon_exercise.txt"
-
-
-➜  git_intro git:(main) ✗ git commit -m "add afternoon_exercise.txt"
-[main (root-commit) 8c3c33c] add afternoon_exercise.txt
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 afternoon_exercise.txt
-➜  git_intro git:(main) 
-
-Now we can see the file has officially been changed.
-
-We can make further changes now too. Open the file using the “open” command and make any change, here I’m going to start my work for the exercise by copying in our intro to Terminal and our directory info, then press save.
-
-But these changes aren’t just for the present you, what if future you or a team member wants to see what specific changes have been made since the last commit? It would make sense to note your changes of course, but too with a title describing the changes, to do so:
-
-➜  git_intro git:(main) git add .  (Use . Instead of file name, as we’re already here, the . Represents the last change made)
-➜  git_intro git:(main) ✗ git commit -m "Terminal Intro and Directory info"
-
-
-Ok perfect, done, but let’s see how our changes look on record. To do this we enter the command 
-
-git log   
-
-commit cdb85660b9fbf3d3814141ffdf806126af58048b (HEAD -> main)
-Author: Ravi Hussein-Patel <ravihusseinpatel@gmail.com>
-Date:   Tue Aug 9 17:13:44 2022 +0100
-
-    Terminal Intro and Directory info
-
-commit 8c3c33ce52bd05fde0aae90303d7c4b74ef3505e
-Author: Ravi Hussein-Patel <ravihusseinpatel@gmail.com>
-Date:   Tue Aug 9 17:06:02 2022 +0100
-
-    add afternoon_exercise.txt
-(END)
-
-(Note: To leave the log press q)
-
-Here we can see our changes, when they happened, and have a rough idea of what changes were made.
-
-Repeat these steps.  Throughout the process ensure to make use of the code git status. This is a cheat code that will tell you if there’s anything to commit
-
-
 
