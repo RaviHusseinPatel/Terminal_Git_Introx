@@ -69,3 +69,61 @@ How do I delete a directory or file?
 rm afternoon_file.txt  — For a file
 rm - r afternoon_file.txt- Directory
 
+Why do we use Git?
+
+Allows us to monitor and track file changes, as well as others who have access to the link.
+
+How do I use Git?
+
+First, we need to create a Git directory. But choose where you want to locate it first:
+
+➜  afternoon_directory cd
+➜  ~ pwd
+/Users/ravi
+➜  ~ ls
+Desktop        Documents      Downloads      Library        Movies         Music          Pictures       Postman        Public         c6_coursenotes coursework
+➜  ~ cd Desktop
+➜  Desktop 
+
+Above shows me leaving my directory, and checking where I am. Then I found the folder I want my work to be in.
+
+Create the Git repository and enter it:
+➜  Desktop mkdir git_intro
+➜  Desktop cd git_intro
+➜  git_intro 
+
+Next we create a git repository within this directory(that is git_intro):
+
+git init
+
+➜  git_intro git init
+Initialized empty Git repository in /Users/ravi/Desktop/git_intro/.git/
+➜  git_intro git:(main) 
+
+How do we add and edit files on Git?
+
+touch afternoon_exercise.txt
+
+
+However, to actually upload this file to Git and have it tracked, we must enter the following code so that it is now “tracked”:
+
+git add afternoon_exercise.txt 
+
+Now this is done, however it is good to check our code for issues now rather than later, so we can edit difficulties one at a time and not go back and forth looking for the issues. To do this we use a code that allows us to check the status of our file:
+
+git status
+
+➜  git_intro git:(main) ✗ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   afternoon_exercise.txt
+
+➜  git_intro git:(main) ✗ 
+
+Things are updated and there are no issues, but for our file to be viewable on GithHub, we must commit our changes. This allows us to also keep a record of what’s been changed and when.
+
+
